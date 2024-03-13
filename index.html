@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formulario</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>FORMULARIO</h1>
+        <form class="form" action="">
+            <label class="label" for="nome"> Nome Completo </label>
+            <input type="text" id="nome" name="nome" placeholder="Pedro Minecraft" required class="input" autocomplete="">
+
+            <label class="label" for="email"> Email </label>
+            <input type="text" id="email" name="email" placeholder="exemplo@email.com" required class="input">
+            
+            <label class="label" for="senha"> Senha </label>
+            <input type="password" id="senha" name="senha" required class="input">
+
+            <label class="label" for="telefone"> Telefone </label>
+            <input type="text" id="telefone" name="telefone" placeholder="(00) 00000-0000" required class="input" maxlength="15" autocomplete="">
+
+            <label class="label" for="data"> Data de Nascimento</label>
+            <input type="date" id="data" name="data" required class="input">
+
+            <button class="button" onclick="enviar()">Enviar</button>
+
+        </form>
+
+    </div>
+    <script>
+        document.getElementById('telefone').addEventListener('input', function (e) {
+          var tel = e.target.value.replace(/\D/g, '');
+          tel = tel.replace(/^(\d{2})(\d)/g, '($1) $2');
+          tel = tel.replace(/(\d)(\d{4})$/, '$1-$2');
+          e.target.value = tel;
+        });
+        function enviar(){
+            alert("enviado com sucesso")
+        }
+    </script>
+</body>
+</html>

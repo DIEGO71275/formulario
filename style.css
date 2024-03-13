@@ -1,0 +1,68 @@
+body{
+    display: flex;
+    justify-content: center;
+}
+
+.container{
+    text-align: center;
+}
+
+h1{
+    font-weight: bold;
+    font-family: "Nunito Sans", sans-serif;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+
+    text-align: start;
+    
+    width: 24rem;
+}
+
+.label{
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+
+    font-weight: bold;
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 0.9rem;
+    
+    color: #334155;
+}
+
+.input{
+    height: 1rem;
+    border: 1px solid #475569;
+    border-radius: 0.8rem;
+
+    font-size: 0.8rem;
+    font-family: "Nunito Sans", sans-serif;
+
+    color: #334155;
+    padding: 0.5rem;
+}
+
+.button{
+    height: 2.5rem;
+    margin-top: 2rem;
+
+    border: 1px solid #1e40af;
+    border-radius: 0.8rem;
+
+    font-size: 1rem;
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: bold;
+
+    background-color: #1d4ed8;
+    color: #f8fafc;
+
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    transition: 1s;
+}
+
+.button:hover{
+    background-color:transparent;
+    color: #334155;
+}
